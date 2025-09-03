@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 홈페이지</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            text-align: center;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: #007bff;
+            margin: 0;
+        }
+        
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        nav a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+        
+        .content {
+            line-height: 1.6;
+        }
+        
+        .about {
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #007bff;
+            border-radius: 5px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #666;
+        }
+        
+        .highlight {
+            background-color: #fff3cd;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌟 나의 홈페이지에 오신 것을 환영합니다</h1>
+            <p>간단하고 깔끔한 웹사이트</p>
+        </header>
+        
+        <nav>
+            <a href="#home">홈</a>
+            <a href="#about">소개</a>
+            <a href="#services">서비스</a>
+            <a href="#contact">연락처</a>
+        </nav>
+        
+        <main class="content">
+            <section id="home">
+                <h2>홈페이지 소개</h2>
+                <p>이곳은 <span class="highlight">HTML과 CSS만을 사용</span>하여 만든 간단한 홈페이지입니다. 
+                   깔끔하고 직관적인 디자인으로 구성되어 있습니다.</p>
+            </section>
+            
+            <div class="about" id="about">
+                <h3>🎯 주요 특징</h3>
+                <ul>
+                    <li>반응형 디자인</li>
+                    <li>깔끔한 레이아웃</li>
+                    <li>사용자 친화적 인터페이스</li>
+                    <li>빠른 로딩 속도</li>
+                </ul>
+            </div>
+            
+            <section id="services">
+                <h2>제공 서비스</h2>
+                <p>다양한 웹 개발 서비스를 제공합니다:</p>
+                <ul>
+                    <li><strong>웹사이트 제작</strong> - 개인 및 기업 웹사이트</li>
+                    <li><strong>반응형 디자인</strong> - 모든 디바이스에 최적화</li>
+                    <li><strong>유지보수</strong> - 지속적인 관리 서비스</li>
+                </ul>
+            </section>
+            
+            <section id="contact">
+                <h2>📞 연락처 정보</h2>
+                <p><strong>이메일:</strong> example@email.com</p>
+                <p><strong>전화:</strong> 010-1234-5678</p>
+                <p><strong>주소:</strong> 서울시 강남구 테헤란로 123</p>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2024 나의 홈페이지. 모든 권리 보유.</p>
+            <p>간단하고 효과적인 웹사이트 디자인</p>
+        </footer>
+    </div>
+</body>
+</html>

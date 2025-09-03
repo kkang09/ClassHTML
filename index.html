@@ -1,3 +1,234 @@
-<html>
-My webpage
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>그라핀 — 개인 포트폴리오</title>
+  <meta name="description" content="방사성폐기물 처리/처분 분야 연구·개발, 모델링, 데이터 시각화 및 웹 제작 포트폴리오" />
+  <style>
+    :root{
+      --bg:#ffffff; --fg:#0f172a; --muted:#64748b; --line:#e2e8f0;
+      --brand:#2563eb; --brand-2:#3b82f6; --card:#f8fafc; --ring:rgba(37,99,235,.18);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Pretendard,Noto Sans KR,Apple SD Gothic Neo,Arial,sans-serif;color:var(--fg);background:var(--bg);line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+    /* Header */
+    header{position:sticky;top:0;background:rgba(255,255,255,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:20}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800}
+    .logo{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:0 0 0 6px var(--ring)}
+    .menu{display:flex;gap:18px}
+    .menu a{color:#334155}
+    .menu a:hover{color:var(--brand)}
+    .cta{padding:10px 14px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;font-weight:700;box-shadow:0 10px 22px var(--ring)}
+
+    /* Hero */
+    .hero{padding:80px 0 54px;border-bottom:1px solid var(--line)}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+    .eyebrow{display:inline-block;padding:6px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:12px;letter-spacing:.04em}
+    h1{margin:12px 0 6px;font-size:42px;line-height:1.15}
+    .sub{color:var(--muted)}
+    .hero-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+    .avatar{height:300px;border-radius:12px;background:radial-gradient(circle at 30% 30%,#e0e7ff,transparent 40%),
+             linear-gradient(145deg,#eef2ff,#e2e8f0);display:flex;align-items:center;justify-content:center}
+    .avatar .circle{width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:0 12px 28px var(--ring)}
+
+    section{padding:60px 0}
+    h2{font-size:28px;margin:0 0 14px}
+    .muted{color:var(--muted)}
+
+    /* Chips / Cards */
+    .chips{display:flex;flex-wrap:wrap;gap:10px}
+    .chip{display:inline-block;font-size:12px;color:#1d4ed8;background:#eff6ff;border:1px solid #dbeafe;padding:6px 10px;border-radius:999px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+    .card h3{margin:4px 0 8px;font-size:18px}
+    .tag{display:inline-block;font-size:12px;color:#0f172a;background:#e2e8f0;padding:2px 8px;border-radius:999px}
+
+    /* Timeline */
+    .timeline{display:grid;gap:12px}
+    .item{display:grid;grid-template-columns:140px 1fr;gap:12px;align-items:start}
+    .item time{color:var(--muted);font-size:14px}
+
+    /* Contact */
+    .contact{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+    .btn{display:inline-block;padding:12px 16px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;font-weight:700;border:none}
+
+    /* Footer */
+    footer{border-top:1px solid var(--line);padding:28px 0;color:#64748b;font-size:14px}
+
+    /* Responsive */
+    @media (max-width: 920px){
+      .hero-grid,.grid-3,.grid-2,.item{grid-template-columns:1fr}
+      .menu{display:none}
+      h1{font-size:34px}
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home"><span class="logo"></span>그라핀</a>
+      <nav class="menu">
+        <a href="#about">소개</a>
+        <a href="#skills">기술</a>
+        <a href="#projects">프로젝트</a>
+        <a href="#experience">경력</a>
+        <a href="#contact" class="cta">이력서</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">방사성폐기물 처리/처분 · 모델링 · 데이터 시각화</span>
+        <h1>그라핀 — 연구자 & 메이커</h1>
+        <p class="sub">PHREEQC/GoldSim 기반의 지화학 모델링, 센서 데이터 분석, 보고서·인포그래픽 제작과 
+          간단한 웹 구현까지, 연구와 실무를 잇는 결과물을 만듭니다.</p>
+        <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="cta" href="#projects">대표 작업 보기</a>
+          <a class="eyebrow" href="#contact">연락하기</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="avatar"><div class="circle" aria-hidden="true"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container grid-2">
+      <div>
+        <h2>소개</h2>
+        <p class="muted">중저준위 방폐물 처분 기술과 커버층 모니터링, 실리카 콜로이드 거동 연구에 관심이 많습니다. 
+          복잡한 기술 내용을 이해하기 쉬운 글과 시각자료로 바꾸는 것을 좋아합니다.</p>
+      </div>
+      <div class="card">
+        <strong>관심 분야</strong>
+        <div class="chips" style="margin-top:8px">
+          <span class="chip">지화학 모델링</span>
+          <span class="chip">콜로이드/표면반응</span>
+          <span class="chip">센서 데이터 분석</span>
+          <span class="chip">보고서·인포그래픽</span>
+          <span class="chip">경량 웹 제작</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <h2>기술</h2>
+      <div class="grid-3" style="margin-top:12px">
+        <div class="card">
+          <h3>모델링</h3>
+          <p class="muted">PHREEQC, GoldSim, DLVO 기반 해석, 감도 분석</p>
+          <div class="chips" style="margin-top:8px"><span class="chip">PHREEQC</span><span class="chip">GoldSim</span><span class="chip">DLVO</span></div>
+        </div>
+        <div class="card">
+          <h3>데이터/코딩</h3>
+          <p class="muted">Python(NumPy/Pandas/Matplotlib), SQLite, Excel</p>
+          <div class="chips" style="margin-top:8px"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">Matplotlib</span></div>
+        </div>
+        <div class="card">
+          <h3>문서/웹</h3>
+          <p class="muted">보고서·포스터·인포그래픽, HTML/CSS 정적 페이지</p>
+          <div class="chips" style="margin-top:8px"><span class="chip">Markdown</span><span class="chip">HTML</span><span class="chip">CSS</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="container">
+      <h2>프로젝트</h2>
+      <p class="muted">일부 공개 가능한 작업 예시입니다.</p>
+      <div class="grid-3" style="margin-top:12px">
+        <article class="card">
+          <span class="tag">R&D</span>
+          <h3>멀티센서 커버층 3D 모니터링</h3>
+          <p class="muted">토양 수분·온도·기체 플럭스 센서를 DB로 통합, 대시보드용 데이터 모델 설계.</p>
+          <div class="chips" style="margin-top:8px"><span class="chip">센서</span><span class="chip">DB</span><span class="chip">시각화</span></div>
+          <p style="margin-top:8px"><a href="#" class="cta" style="padding:8px 10px;font-weight:600">요약 보기</a></p>
+        </article>
+        <article class="card">
+          <span class="tag">Simulation</span>
+          <h3>실리카 콜로이드 거동 모델</h3>
+          <p class="muted">고 pH 공극수에서 용출–과포화–응집 과정을 수치화하고 감도 분석 수행.</p>
+          <div class="chips" style="margin-top:8px"><span class="chip">PHREEQC</span><span class="chip">DLVO</span></div>
+          <p style="margin-top:8px"><a href="#" class="cta" style="padding:8px 10px;font-weight:600">모델 개요</a></p>
+        </article>
+        <article class="card">
+          <span class="tag">Workflow</span>
+          <h3>AI 보조 보고서 자동화</h3>
+          <p class="muted">문헌 요약→표 작성→도식 초안까지 반자동 파이프라인 설계(내부 테스트용).</p>
+          <div class="chips" style="margin-top:8px"><span class="chip">Python</span><span class="chip">자동화</span></div>
+          <p style="margin-top:8px"><a href="#" class="cta" style="padding:8px 10px;font-weight:600">프로세스</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <div class="container">
+      <h2>경력</h2>
+      <div class="timeline" style="margin-top:12px">
+        <div class="item">
+          <time>2023–현재</time>
+          <div>
+            <strong>방사성폐기물 처리/처분 관련 업무</strong>
+            <p class="muted">중저준위 처분 기술, 다층 차수체, DSRS 용기, 지화학 모델링 등.</p>
+          </div>
+        </div>
+        <div class="item">
+          <time>2019–2023</time>
+          <div>
+            <strong>연구·실험 프로젝트</strong>
+            <p class="muted">유리섬유 용출, 콜로이드 형성 및 표면전하 거동 분석, 실험 데이터 정리.</p>
+          </div>
+        </div>
+        <div class="item">
+          <time>그 외</time>
+          <div>
+            <strong>협업/특허·문서화</strong>
+            <p class="muted">대학·기업 공동연구, 특허·보고서·포스터 제작 및 표준화 문서 정리.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2>연락하기</h2>
+      <div class="card">
+        <div class="contact">
+          <a class="btn" href="mailto:hello@example.com">이메일 보내기</a>
+          <a class="btn" href="#" aria-disabled="true" style="opacity:.85">이력서(PDF)</a>
+          <span class="muted">* 실제 링크와 이메일 주소로 교체하세요.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <span>© 2025 그라핀</span>
+      <span class="muted">마지막 업데이트: 2025-09-03</span>
+    </div>
+  </footer>
+</body>
 </html>
